@@ -1,0 +1,219 @@
+body { 
+  font-family: Garamond, ‘Book Antiqua’, Palatino, serif;
+  font-size: 18px;
+}
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -5px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    margin: -30px;
+    height: 5px; /* .push must be the same height as .footer */
+}
+.navbar.navbar-inverse .navbar-header .navbar-brand {
+        display: block;
+        text-align:center;
+        float: none;
+        vertical-align: top;
+}
+.navbar.navbar-inverse .navbar-header{
+  float: none; 
+}
+.navbar-inverse .navbar-brand {
+  color: #000000;
+  font-size: 26px;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .navbar .navbar-brand {
+    font-size: 12px;
+    font-weight: bolder;
+  }
+}
+@media (max-width: 853px){
+  #dataList {
+    display: none;
+  }
+}
+.navbar-inverse .navbar-brand:hover {
+  color: #000000;
+}
+.navbar-inverse {
+  background-color: #ffffff;
+  border-color: #666666;
+  -moz-box-shadow: 2px 2px 7px #000;
+  -webkit-box-shadow: 2px 2px 7px #000;
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: #000000;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: #000000;
+}
+#map{
+  box-shadow: 1px 5px 12px #333;
+  position:absolute;
+  top:51px;left:0px;
+  width:80%;
+  height: 88%;
+  padding: 1px 1px;  
+}
+#dataTitle{
+      box-shadow: 1px 5px 12px #333;
+      position:absolute;
+      z-index: 90;
+      top:51px; right:0; width:20%; height: 4%;
+      bottom:0;
+      text-align: center;
+      background:rgba(255, 255 , 240, 0.8);
+      margin:0;
+      padding:2px;
+}
+#marker-list {
+      box-shadow: 1px 5px 12px #333;
+      position:absolute;
+      z-index: 90;
+      top:81px; right:0; width:20%; height: 83.8%;
+      bottom:0;
+      overflow-x:auto;
+      background:rgba(255, 255 , 240, 0.8);
+      margin:0;
+      padding:5px;
+  }
+  #marker-list li {
+      font-size:15px;
+      padding:5px;
+      margin:0;
+      list-style-type:none;
+      border-bottom:1px solid rgba(0,0,0,0.4);
+      text-align: center;
+  }
+  #marker-list li:hover {
+      background:#eee;
+  }
+.menu-ui {
+  position:absolute;
+  top:65px;
+  right:20%;
+  z-index:90;
+  border-radius:3px;
+  width:450px;
+  text-align: center;
+  }
+  .menu-ui a {
+    font-size:14px;
+    color:#404040;
+    display: inline-block;
+    margin:2px;
+    padding:5px;
+    text-decoration:none;
+    text-align:center;
+    }
+    .menu-ui a:hover {
+      background:#f8f8f8;
+      color:#404040;
+      height: 30px;
+      }
+    .menu-ui a.active,
+    .menu-ui a.active:hover {
+      background:#640520;
+      color:#FFF !important;
+      height: 30px;
+      }
+  @media (max-width: 853px){
+    .menu-ui {
+        left:30%;
+        width:300px;
+      }
+  #map{
+    width:100%; 
+  }
+}
+    /* Marker tweaks */
+    .leaflet-popup-close-button {
+      display:none;
+      }
+    .leaflet-popup-content {
+      font:400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+      padding:0;
+      width:200px;
+      }
+      .leaflet-popup-content-wrapper {
+        text-align: center;
+        padding:0;
+        }
+      .leaflet-popup-content h3 {
+        background:#91c949;
+        color:#fff;
+        margin:0;
+        display:block;
+        padding:10px;
+        border-radius:3px 3px 0 0;
+        font-weight:700;
+        margin-top:-15px;
+        text-align: center;
+        }
+      .leaflet-popup-content div {
+        padding:15px;
+        }
+      .leaflet-container .leaflet-marker-icon { 
+        font-size: 8px;
+        cursor:pointer; 
+      }
+
+      .leaflet-container h6{ 
+        font-size: 12px;
+      }
+
+      .table {
+      margin-bottom: 5px;
+      }
+
+    .alert.alert-info {
+          position: absolute;
+          top: 18%;
+          left: 8%;
+          z-index:100;
+          text-align: center;
+          border: 2px solid #3498DB;
+          border-radius: 5px;
+          color: black;
+          
+           }
+    .spinner {
+        position: fixed;
+        top: 50%;
+        left: 40%;
+        margin-left: -50px; /* half width of the spinner gif */
+        margin-top: -50px; /* half height of the spinner gif */
+        text-align:center;
+        z-index:1000;
+        overflow: auto;
+        width: 100px; /* width of the spinner gif */
+        height: 102px; /*hight of the spinner gif +2px to fix IE8 issue */
+    }
+
+
+    @media (max-width: 853px){
+
+     .alert.alert-info {
+              position: absolute;
+              top: 30%;
+              left: 0%;
+              
+    }
+    .spinner {
+        top: 50%;
+        left: 50%;
+       
+    }
+  }

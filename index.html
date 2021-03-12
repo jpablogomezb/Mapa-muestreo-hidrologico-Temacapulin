@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Muestreo Hidrológico en Temacapulín</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no,maximum-scale=1,width=device-width'/>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" type="image/x-icon" href="./static/img/world_earth_globe.png">
+<!-- Boostrap -->
+<link href="./static/css/bootstrap.min.css" rel="stylesheet">
+<!-- Fontawesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- Leaflet -->
+<!-- <link rel="stylesheet" href="./static/lib/leaflet-0.7.3/leaflet.css"/>  -->
+<link rel="stylesheet" href="./static/css/Leaflet.Coordinates-0.1.4.css"/>
+<!-- Mapbox -->
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' /> 
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.mapbox.css' rel='stylesheet'/>
+<!-- <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.css"> -->
+<link rel="stylesheet" href="./static/css/main.css"/>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div style="text-align: center;">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <a class="navbar-brand" ref="http://www.imdec.net/" target="_blank">IMDEC | Muestreo de Datos Hidrológicos en la Microcuenca Temacapulín</a>
+            </div>    
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#Acerca">¿Acerca?</a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#Contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div> -->
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+  </nav>
+</head>
+<body>
+<!-- Success alert box -->
+<div id="success" class="alert alert-dismissible alert-info" style="display:none;">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <p ><i class="fa fa-info"></i> ¡Bienvenido! En el panel de la derecha se enlistan los datos del muestreo, <br> da clic sobre alguno para encontrarlo en el mapa. Para filtrar los datos utiliza los botones superiores. <br> Para alejar y acercar el mapa, cambiar capas base y cargar o subir otras capas de referencia <br> utiliza los controles de la izquierda.</p>
+</div>
+<div id="spinner" class="spinner" style="display:none;">
+      <i class="fa fa-spinner fa-pulse fa-4x"></i>
+</div>
+<div class="wrapper">
+  <nav class='menu-ui'>
+    <a class="btn btn-default" href="#" role="button" id='pozosBtn'>Pozos</a>
+    <a class="btn btn-default" href="#" role="button" id='manantialesBtn'>Manantiáles</a>
+    <a class="btn btn-default" href="#" role="button" id='riachuelosBtn'>Ríos y Riachuelos (Puntos ref.)</a>
+    <br>
+    <a class="btn btn-default active" href="#" role="button" id='allBtn' >Muestreo completo</a>
+    <a class="btn btn-default" href="#" role="button" id='hideBtn' >Ocultar muestreo</a>
+  </nav>
+  <div id="map"></div>
+  <div id=dataList>
+    <div id="dataTitle"><b>Datos muestreados:</div>
+    <div id="marker-list"></div>
+  </div>
+</div>
+<div class="footer">
+   <div class="container" style="text-align:center">
+        <p class="text-muted"><h5><em>Created by <a href="https://twitter.com/jpablogomezb" target="_blank" >@jpablogomezb</a></em>, powered by Geoinnovare</h5></p>
+    </div>
+ </div>  
+<!-- Leaflet
+<script src="./static/lib/leaflet-0.7.3/leaflet.js"></script> -->
+<!-- Google API -->
+<!-- CartoDB -->
+<!-- <script src="https://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script> -->
+<script src="https://maps.google.com/maps/api/js?v=3&key=AIzaSyDDG_RNIoqOP-MRAvEyDqgblxV3b7R_EhE"></script>
+<!-- JQuery -->
+<script src='./static/js/jquery-1.11.3.min.js'></script>
+<!-- Bootstrap -->
+<script src='./static/js/bootstrap.min.js'></script>
+  <!-- Mapbox -->
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script> 
+<!-- Leaflet plugins -->
+<script src="./static/js/Google.js"></script>
+<!-- <script src="./static/js/Bing.js"></script>  -->
+<script type="text/javascript" src="./static/js/Leaflet.Coordinates-0.1.4.min.js"></script>
+<script src="./static/js/leaflet.filelayer.js"> </script>
+<script src="./static/js/togeojson.js"> </script>
+<script src="./static/js/main.js"> </script>
+</body>
+</html>
